@@ -1,17 +1,20 @@
 package model
 
-open class Menu(private val id: Int, var nama: String, var harga: Float, var stok: Int) {
-    fun gantiNama(namaBaru: String) {
-        this.nama = namaBaru
-    }
-    fun gantiHarga(hargaBaru: Float) {
-        this.harga = hargaBaru
-    }
-    fun cekId(): Int {
+abstract class Menu(private val id: Int, private val tipe:String, private var nama: String, private var harga: Double, private var stok: Int) {
+    fun ambilId(): Int {
         return this.id
     }
-    fun tambahStok(jumlahStok: Int) {
-        this.stok += jumlahStok
+    fun ambilNama(): String {
+        return this.nama
+    }
+    fun ambilHarga(): Double {
+        return this.harga
+    }
+    fun ambilStok(): Int {
+        return this.stok
+    }
+    fun ambilTipe(): String {
+        return this.tipe
     }
     fun kurangiStok(jumlahStok: Int) {
         if (this.stok == 0 || jumlahStok >= this.stok) {
@@ -20,7 +23,5 @@ open class Menu(private val id: Int, var nama: String, var harga: Float, var sto
             this.stok -= jumlahStok
         }
     }
-    open fun displayInfo() {
-        println("❓ - [${cekId()}] - $nama \t-\t $harga (Tersedia? ${stok>0})")
-    }
+    abstract fun displayInfo()
 }

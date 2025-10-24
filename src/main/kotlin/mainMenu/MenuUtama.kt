@@ -1,8 +1,9 @@
 package mainMenu
 
+import system.SystemOutput
 import java.util.Scanner
 
-fun menu() {
+fun mainMenu() {
     val scanner = Scanner(System.`in`)
 
     val menuInfo = """
@@ -18,25 +19,17 @@ fun menu() {
         println("\n$menuInfo")
         print("Pilih opsi: ")
         val option = scanner.nextInt()
-        if (option !in 1..3) {
-            println("==============!!==============")
-        }
-
         when (option) {
             1 -> {
                 kelolaMenu()
             }
             2 -> {
-                println("Di sini menu untuk mengelola transaksi")
+                kelolaTransaksi()
             }
             3 -> {
                 exit()
             }
-            else -> println("\u001B[31mOpsi tidak tersedia!\u001B[0m")
-        }
-
-        if (option !in 1..3) {
-            println("==============!!==============")
+            else -> SystemOutput.tampilkanPesanError("Opsi tidak tersedia!")
         }
     } while (option !in 1..3)
 }

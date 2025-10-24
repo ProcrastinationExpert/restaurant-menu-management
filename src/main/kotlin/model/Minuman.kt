@@ -1,10 +1,10 @@
 package model
 
-class Minuman(id: Int, nama: String, harga: Float, stok: Int, var isDingin: Boolean): Menu(id, nama, harga, stok) {
-    fun gantiDingin(isDingin: Boolean) {
-        this.isDingin = isDingin
+class Minuman(id: Int, tipe:String, nama: String, harga: Double, stok: Int, var isDingin: Boolean): Menu(id, tipe, nama, harga, stok) {
+    fun cekDingin(): Boolean {
+        return this.isDingin
     }
     override fun displayInfo() {
-        println("🍷 - [${cekId()}] - $nama \t-\t $harga \t(❄️${if (isDingin) "✔" else "✖"}) (Tersedia? ${stok>0})")
+        println("🍺 - [${ambilId()}] - ${ambilNama()} - ${ambilHarga()} (❄️${if (cekDingin()) "✔" else "✖"}) (Tersedia? ${ambilStok()>0})")
     }
 }
