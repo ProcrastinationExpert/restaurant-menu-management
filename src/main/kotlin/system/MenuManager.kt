@@ -29,8 +29,9 @@ object MenuManager {
     }
 
     fun showMenuList() {
+        updateMenuList()
         if (menuList.isEmpty()) {
-            println("Tidak ada menu yang terdaftar!")
+            SystemOutput.tampilkanPesanMiniError("Tidak ada menu yang terdaftar!")
         }
         for (menu in menuList) {
             menu.displayInfo()
@@ -56,20 +57,20 @@ object MenuManager {
     fun editMenu(id:Int, editedMenu: Menu) {
         val menuToEdit = findMenuById(id)
         if (menuToEdit == null) {
-            println("Menu dengan id tersebut tidak dapat ditemukan!")
+            SystemOutput.tampilkanPesanMiniError("Menu dengan id tersebut tidak dapat ditemukan!")
             return
         }
         menuList[menuList.indexOf(menuToEdit)] = editedMenu
-        println("Menu berhasil diedit")
+        SystemOutput.tampilkanPesanSukses("Menu berhasil diedit")
     }
 
     fun removeMenu(id: Int) {
         val menuToRemove = findMenuById(id)
         if (menuToRemove == null) {
-            println("Menu dengan id tersebut tidak dapat ditemukan!")
+            SystemOutput.tampilkanPesanMiniError("Menu dengan id tersebut tidak dapat ditemukan!")
             return
         }
         menuList.remove(menuToRemove)
-        println("Menu berhasil dihapus")
+        SystemOutput.tampilkanPesanSukses("Menu berhasil dihapus")
     }
 }

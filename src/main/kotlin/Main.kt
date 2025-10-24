@@ -1,11 +1,11 @@
 import mainMenu.mainMenu
+import system.SystemOutput
 
 fun main() {
     try {
         mainMenu()
-    } catch (error: NullPointerException) {
-        println("==============!!==============")
-        println("Program error: $error")
+    } catch (error: Exception) {
+        SystemOutput.tampilkanPesanFatalError("$error")
         error.printStackTrace()
     }
 }

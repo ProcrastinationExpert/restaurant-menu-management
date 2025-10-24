@@ -8,25 +8,21 @@ import system.Colors.GREEN_COLOR
 object SystemOutput {
     fun tampilkanPesanSukses(pesan:String) {
         val tampilanSukses:String = """
-            ==============✅==============
-            $GREEN_COLOR$pesan$RESET_COLOR
-            ==============✅==============
+            ✅ $GREEN_COLOR$pesan$RESET_COLOR
         """.trimIndent()
         println("\n$tampilanSukses")
     }
-    fun tampilkanPesanWarning(pesan:String) {
+    fun tampilkanPesanMiniError(pesan:String) {
         val tampilanWarning:String = """
-            ==============⚠️==============
-            $YELLOW_COLOR$pesan$RESET_COLOR
-            ==============⚠️==============
+            ⚠️ $YELLOW_COLOR$pesan$RESET_COLOR
         """.trimIndent()
         println("\n$tampilanWarning")
     }
-    fun tampilkanPesanError(pesan:String) {
+    fun tampilkanPesanFatalError(pesan:String) {
         val tampilanError:String = """
-            ==============❌==============
+            ===========❌ERROR❌==========
             $RED_COLOR$pesan$RESET_COLOR
-            ==============❌==============
+            ===========❌ERROR❌==========
         """.trimIndent()
         println("\n$tampilanError")
     }

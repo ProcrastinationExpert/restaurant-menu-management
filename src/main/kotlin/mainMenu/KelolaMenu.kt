@@ -12,11 +12,11 @@ fun kelolaMenu() {
         ==============================
         Kelola Menu Restoran
         ==============================
-        1. Lihat daftar menu
-        2. Tambahkan menu baru
-        3. Edit menu
-        4. Hapus menu
-        5. Simpan menu dan kembali ke menu awal
+        1. Lihat Daftar Menu
+        2. Tambahkan Menu Baru
+        3. Edit Menu
+        4. Hapus Menu
+        5. Simpan Menu dan Kembali ke Menu Awal
         ==============================
     """.trimIndent()
 
@@ -45,7 +45,7 @@ fun kelolaMenu() {
             5 -> {
                 MenuManager.saveMenuList()
             }
-            else -> SystemOutput.tampilkanPesanError("Opsi tidak tersedia!")
+            else -> SystemOutput.tampilkanPesanMiniError("Opsi tidak tersedia!")
         }
     } while (pilih != 5)
     mainMenu()

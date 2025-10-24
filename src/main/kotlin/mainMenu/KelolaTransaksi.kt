@@ -39,7 +39,7 @@ fun kelolaTransaksi() {
                 TransaksiManager.saveDaftarTransaksi()
             }
             else -> {
-                SystemOutput.tampilkanPesanError("Pilihan tidak tersedia!")
+                SystemOutput.tampilkanPesanMiniError("Pilihan tidak tersedia!")
             }
         }
     } while (pilih != 4)

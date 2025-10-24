@@ -27,21 +27,22 @@ object TransaksiManager {
         return daftarTransaksi.find { it.id == id }
     }
 
-
     fun showTransaksiList() {
         if (daftarTransaksi.isEmpty()) {
-            println("Tidak ada transaksi yang pernah dilakukan!")
+            SystemOutput.tampilkanPesanMiniError("Tidak ada transaksi yang pernah dilakukan!")
             return
         }
         for (transaksi in daftarTransaksi) {
             transaksi.tampilkanInfo()
+            println("------------------------------")
         }
     }
 
     fun removeTransaksi(id: Int) {
         val transaksiToRemove = findTransaksiById(id)
         if (transaksiToRemove == null) {
-            println("Transaksi dengan id tersebut tidak dapat ditemukan")
+            SystemOutput.tampilkanPesanMiniError("Transaksi dengan id tersebut tidak dapat ditemukan")
+            return
         }
         daftarTransaksi.remove(transaksiToRemove)
         println("Transaksi berhasil dihapus")

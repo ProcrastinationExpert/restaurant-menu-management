@@ -1,5 +1,7 @@
 package model
 
+import system.SystemOutput
+
 abstract class Menu(private val id: Int, private val tipe:String, private var nama: String, private var harga: Double, private var stok: Int) {
     fun ambilId(): Int {
         return this.id
@@ -18,7 +20,7 @@ abstract class Menu(private val id: Int, private val tipe:String, private var na
     }
     fun kurangiStok(jumlahStok: Int) {
         if (this.stok == 0 || jumlahStok >= this.stok) {
-            error("Stok kosong atau parameter berlebihan!")
+            SystemOutput.tampilkanPesanMiniError("Stok kosong atau jumlah stok yang diambil berlebihan!")
         } else {
             this.stok -= jumlahStok
         }

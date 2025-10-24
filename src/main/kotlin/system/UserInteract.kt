@@ -8,7 +8,7 @@ object UserInteract {
     }
 
     fun konfirmasiEnter() {
-        print("Tekan ENTER untuk melanjutkan...")
+        print("\nTekan ENTER untuk melanjutkan...")
         readln()
     }
 

@@ -1,19 +1,7 @@
 [
   {
-    "id": 1,
+    "id": 3,
     "daftarPesanan": [
-      {
-        "menu": {
-          "isDingin": true,
-          "id": 2,
-          "tipe": "minuman",
-          "nama": "Es Kepal Milo",
-          "harga": 10000.0,
-          "stok": 100
-        },
-        "jumlah": 2,
-        "subtotal": 20000.0
-      },
       {
         "menu": {
           "isPedas": true,
@@ -21,44 +9,32 @@
           "tipe": "makanan",
           "nama": "Nasi Goreng",
           "harga": 15000.0,
-          "stok": 100
+          "stok": 90
         },
-        "jumlah": 2,
-        "subtotal": 30000.0
-      },
-      {
-        "menu": {
-          "isDingin": true,
-          "id": 2,
-          "tipe": "minuman",
-          "nama": "Es Kepal Milo",
-          "harga": 10000.0,
-          "stok": 100
-        },
-        "jumlah": 2,
-        "subtotal": 20000.0
+        "jumlah": 10,
+        "subtotal": 150000.0
       }
     ],
-    "totalHarga": 70000.0,
-    "tanggal": "2025-10-24T00:14:14.966431100"
+    "totalHarga": 150000.0,
+    "tanggal": "2025-10-24T16:19:13.995448300"
   },
   {
-    "id": 2,
+    "id": 4,
     "daftarPesanan": [
       {
         "menu": {
-          "isDingin": true,
-          "id": 2,
-          "tipe": "minuman",
-          "nama": "Es Kepal Milo",
-          "harga": 10000.0,
-          "stok": 100
+          "isPedas": true,
+          "id": 3,
+          "tipe": "makanan",
+          "nama": "Nasi Goreng",
+          "harga": 15000.0,
+          "stok": 89
         },
         "jumlah": 1,
-        "subtotal": 10000.0
+        "subtotal": 15000.0
       }
     ],
-    "totalHarga": 10000.0,
-    "tanggal": "2025-10-24T00:16:37.854700600"
+    "totalHarga": 15000.0,
+    "tanggal": "Jumat, 24 Oktober 2025 - 18:26:49"
   }
 ]

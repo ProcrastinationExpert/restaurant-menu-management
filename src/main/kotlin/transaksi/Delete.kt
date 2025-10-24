@@ -9,7 +9,7 @@ fun hapusTransaksi() {
     println("==============================")
     val idToDelete = UserInteract.pilihOpsiAngka("Masukkan id transaksi yang ingin dihapus: ")
     if (idToDelete == null) {
-        SystemOutput.tampilkanPesanError("Id tidak boleh kosong!")
+        SystemOutput.tampilkanPesanMiniError("Id tidak boleh kosong!")
         return
     }
     TransaksiManager.removeTransaksi(idToDelete)

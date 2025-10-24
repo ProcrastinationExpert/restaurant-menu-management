@@ -19,14 +19,13 @@ object DataManager {
     fun saveMenuData(daftarMenu: ArrayList<Menu>, filePathMenu:String) {
         val jsonText = gson.toJson(daftarMenu) // konversi array ke json dalam bentuk string
         File(filePathMenu).writeText(jsonText) // write text ke file json sesuai dengan pathnya
-        println("Berhasil menyimpan data array ke $filePathMenu")
+        SystemOutput.tampilkanPesanSukses("Menu berhasil disimpan ke dalam file json")
     }
 
     fun getMenuData(filePathMenu:String): ArrayList<Menu> {
         val file = File(filePathMenu)
         if (!file.exists()) { // kalau file json tidak ditemukan makan akan muncul error
-            SystemOutput.tampilkanPesanError("$filePathMenu tidak ditemukan")
-            return arrayListOf()
+            error("$filePathMenu tidak dapat ditemukan")
         }
         val jsonText = file.readText()
         if (jsonText.isBlank()) { // kalo json isinya kosong maka akan mengembalikan list menu yang kosong
@@ -54,13 +53,13 @@ object DataManager {
     fun saveTransaksiData(daftarTransaksi: ArrayList<Transaksi>, filePathTransaksi: String) {
         val jsonData = gson.toJson(daftarTransaksi)
         File(filePathTransaksi).writeText(jsonData)
-        println("Berhasil menyimpan file transaksi ke $filePathTransaksi")
+        SystemOutput.tampilkanPesanSukses("Transaksi berhasil disimpan ke dalam file json")
     }
 
     fun getTransaksiData(filePathTransaksi: String): ArrayList<Transaksi> {
         val file = File(filePathTransaksi)
         if (!file.exists()) {
-            error("$filePathTransaksi tidak ditemukan")
+            error("$filePathTransaksi tidak dapat ditemukan")
         }
         val jsonText = file.readText()
         if (jsonText.isBlank()) {

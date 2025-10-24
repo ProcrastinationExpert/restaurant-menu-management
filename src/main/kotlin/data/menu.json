@@ -1,18 +1,26 @@
 [
   {
-    "isDingin": true,
-    "id": 2,
-    "tipe": "minuman",
-    "nama": "Es Kepal Milo",
-    "harga": 10000.0,
-    "stok": 100
-  },
-  {
     "isPedas": true,
     "id": 3,
     "tipe": "makanan",
     "nama": "Nasi Goreng",
     "harga": 15000.0,
-    "stok": 100
+    "stok": 89
+  },
+  {
+    "isPedas": true,
+    "id": 4,
+    "tipe": "makanan",
+    "nama": "Nasi Uduk",
+    "harga": 15000.0,
+    "stok": 1
+  },
+  {
+    "isDingin": true,
+    "id": 5,
+    "tipe": "minuman",
+    "nama": "S Krim JHe",
+    "harga": 10.0,
+    "stok": 0
   }
 ]

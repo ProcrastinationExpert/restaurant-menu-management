@@ -75,7 +75,7 @@ fun tambahMenuBaru() {
             )
         }
         else -> {
-            SystemOutput.tampilkanPesanError("Tipe menu tidak diketahui!")
+            SystemOutput.tampilkanPesanMiniError("Tipe menu tidak diketahui!")
             return
         }
     }
@@ -85,9 +85,9 @@ fun tambahMenuBaru() {
 
     println("==============================")
     if (konfirmasi != "ya") {
-        println("Menu batal ditambahkan!")
+        SystemOutput.tampilkanPesanMiniError("Menu batal ditambahkan!")
     } else {
         MenuManager.addMenu(menuUntukDitambah)
-        println("Menu berhasil ditambahkan!")
+        SystemOutput.tampilkanPesanSukses("Menu berhasil ditambahkan!")
     }
 }

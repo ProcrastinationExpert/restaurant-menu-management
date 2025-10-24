@@ -12,7 +12,7 @@ fun editMenuDalamList() {
     val idEdit = readlnOrNull()?.toIntOrNull() ?: -1
     val menuSebelumDiedit = MenuManager.findMenuById(idEdit)
     if (menuSebelumDiedit == null) {
-        SystemOutput.tampilkanPesanError("Menu dengan id tersebut tidak ada")
+        SystemOutput.tampilkanPesanMiniError("Menu dengan id tersebut tidak ada")
         return
     }
 
@@ -32,7 +32,7 @@ fun editMenuDalamList() {
     else inputHarga.toDoubleOrNull() ?: menuSebelumDiedit.ambilHarga()
 
     if (hargaBaru < 0) {
-        SystemOutput.tampilkanPesanError("Nominal harga tidak boleh kurang dari nol!")
+        SystemOutput.tampilkanPesanMiniError("Nominal harga tidak boleh kurang dari nol!")
         return
     }
 
@@ -43,7 +43,7 @@ fun editMenuDalamList() {
     else inputStok.toIntOrNull() ?: menuSebelumDiedit.ambilStok()
 
     if (stokBaru < 0) {
-        SystemOutput.tampilkanPesanError("Jumlah stok tidak boleh kurang dari nol!")
+        SystemOutput.tampilkanPesanMiniError("Jumlah stok tidak boleh kurang dari nol!")
         return
     }
 
@@ -82,7 +82,7 @@ fun editMenuDalamList() {
             )
         }
         else -> {
-            SystemOutput.tampilkanPesanError("Terdapat menu yang bertipe bukan makanan dan minuman (anomali)")
+            SystemOutput.tampilkanPesanMiniError("Terdapat menu yang bertipe bukan makanan dan minuman (anomali)")
             return
         }
     }

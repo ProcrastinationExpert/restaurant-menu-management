@@ -13,7 +13,7 @@ fun exit() {
                 println("==============================")
             }
             false -> mainMenu()
-            else -> SystemOutput.tampilkanPesanError("Opsi Tidak Tersedia!")
+            else -> SystemOutput.tampilkanPesanMiniError("Opsi Tidak Tersedia!")
         }
     } while (konfirmasi == null)
 }

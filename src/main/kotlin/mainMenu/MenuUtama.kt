@@ -7,6 +7,7 @@ fun mainMenu() {
     val scanner = Scanner(System.`in`)
 
     val menuInfo = """
+        ==============================
         Program Manajemen Menu Restoran
         ==============================
         1. Kelola Menu
@@ -29,7 +30,7 @@ fun mainMenu() {
             3 -> {
                 exit()
             }
-            else -> SystemOutput.tampilkanPesanError("Opsi tidak tersedia!")
+            else -> SystemOutput.tampilkanPesanMiniError("Opsi tidak tersedia!")
         }
     } while (option !in 1..3)
 }
