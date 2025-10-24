@@ -3,16 +3,8 @@
     "isPedas": true,
     "id": 1,
     "tipe": "makanan",
-    "nama": "Nasi Goreng",
-    "harga": 15000.0,
-    "stok": 0
-  },
-  {
-    "isDingin": true,
-    "id": 2,
-    "tipe": "minuman",
-    "nama": "Pop Ice Coklat",
-    "harga": 5000.0,
-    "stok": 1
+    "nama": "nasi",
+    "harga": 1000.0,
+    "stok": 16
   }
 ]

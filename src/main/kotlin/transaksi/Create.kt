@@ -111,9 +111,8 @@ fun buatTransaksi() {
         println("==============================")
 
         val konfirmasiPilihan = UserInteract.konfirmasiYaTidak("Apakah sudah yakin transaksinya?")
-        if (konfirmasiPilihan == false) {
+        if (konfirmasiPilihan != true) {
             SystemOutput.tampilkanPesanMiniError("Transaksi dibatalkan.")
-            UserInteract.konfirmasiEnter()
             return
         }
 
