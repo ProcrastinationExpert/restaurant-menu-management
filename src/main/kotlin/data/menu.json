@@ -1,0 +1,18 @@
+[
+  {
+    "isDingin": true,
+    "id": 2,
+    "tipe": "minuman",
+    "nama": "Es Kepal Milo",
+    "harga": 10000.0,
+    "stok": 100
+  },
+  {
+    "isPedas": true,
+    "id": 3,
+    "tipe": "makanan",
+    "nama": "Nasi Goreng",
+    "harga": 15000.0,
+    "stok": 100
+  }
+]
