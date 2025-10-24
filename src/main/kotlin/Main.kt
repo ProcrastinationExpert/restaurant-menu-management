@@ -1,8 +1,8 @@
-import mainMenu.menu
+import mainMenu.mainMenu
 
 fun main() {
     try {
-        menu()
+        mainMenu()
     } catch (error: NullPointerException) {
         println("==============!!==============")
         println("Program error: $error")
