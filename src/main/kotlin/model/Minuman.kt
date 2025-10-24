@@ -1,6 +1,6 @@
 package model
 
-class Minuman(id: Int, tipe:String, nama: String, harga: Double, stok: Int, var isDingin: Boolean): Menu(id, tipe, nama, harga, stok) {
+class Minuman(id: Int, tipe:String, nama: String, harga: Double, stok: Int, private var isDingin: Boolean): Menu(id, tipe, nama, harga, stok) {
     fun cekDingin(): Boolean {
         return this.isDingin
     }

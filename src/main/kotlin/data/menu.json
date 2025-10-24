@@ -1,26 +1,18 @@
 [
   {
     "isPedas": true,
-    "id": 3,
+    "id": 1,
     "tipe": "makanan",
     "nama": "Nasi Goreng",
     "harga": 15000.0,
-    "stok": 89
-  },
-  {
-    "isPedas": true,
-    "id": 4,
-    "tipe": "makanan",
-    "nama": "Nasi Uduk",
-    "harga": 15000.0,
-    "stok": 1
+    "stok": 0
   },
   {
     "isDingin": true,
-    "id": 5,
+    "id": 2,
     "tipe": "minuman",
-    "nama": "S Krim JHe",
-    "harga": 10.0,
-    "stok": 0
+    "nama": "Pop Ice Coklat",
+    "harga": 5000.0,
+    "stok": 1
   }
 ]

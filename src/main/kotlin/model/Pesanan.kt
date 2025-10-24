@@ -1,11 +1,14 @@
 package model
 
 data class Pesanan(
-    val menu: Menu,
-    var jumlah: Int,
-    var subtotal: Double = menu.ambilHarga() * jumlah
+    val menuId: Int,
+    val namaMenu: String,
+    val hargaSatuan: Double,
+    var jumlah: Int
 ) {
+    var subtotal: Double = hargaSatuan * jumlah
+
     fun displayInfo() {
-        println("${menu.ambilNama()} x$jumlah ($subtotal")
+        println("$namaMenu x$jumlah ($subtotal)")
     }
 }

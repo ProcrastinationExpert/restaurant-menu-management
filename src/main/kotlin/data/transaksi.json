@@ -1,40 +1,30 @@
 [
   {
-    "id": 3,
+    "id": 1,
     "daftarPesanan": [
       {
-        "menu": {
-          "isPedas": true,
-          "id": 3,
-          "tipe": "makanan",
-          "nama": "Nasi Goreng",
-          "harga": 15000.0,
-          "stok": 90
-        },
-        "jumlah": 10,
-        "subtotal": 150000.0
+        "menuId": 1,
+        "namaMenu": "Nasi Goreng",
+        "hargaSatuan": 15000.0,
+        "jumlah": 100,
+        "subtotal": 1500000.0
       }
     ],
-    "totalHarga": 150000.0,
-    "tanggal": "2025-10-24T16:19:13.995448300"
+    "totalHarga": 1500000.0,
+    "tanggal": "Jumat, 24 Oktober 2025 - 20:12:57"
   },
   {
-    "id": 4,
+    "id": 2,
     "daftarPesanan": [
       {
-        "menu": {
-          "isPedas": true,
-          "id": 3,
-          "tipe": "makanan",
-          "nama": "Nasi Goreng",
-          "harga": 15000.0,
-          "stok": 89
-        },
-        "jumlah": 1,
-        "subtotal": 15000.0
+        "menuId": 2,
+        "namaMenu": "Pop Ice Coklat",
+        "hargaSatuan": 5000.0,
+        "jumlah": 99,
+        "subtotal": 495000.0
       }
     ],
-    "totalHarga": 15000.0,
-    "tanggal": "Jumat, 24 Oktober 2025 - 18:26:49"
+    "totalHarga": 495000.0,
+    "tanggal": "Jumat, 24 Oktober 2025 - 21:11:49"
   }
 ]

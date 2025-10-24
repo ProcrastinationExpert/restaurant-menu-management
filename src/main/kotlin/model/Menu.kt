@@ -19,8 +19,8 @@ abstract class Menu(private val id: Int, private val tipe:String, private var na
         return this.tipe
     }
     fun kurangiStok(jumlahStok: Int) {
-        if (this.stok == 0 || jumlahStok >= this.stok) {
-            SystemOutput.tampilkanPesanMiniError("Stok kosong atau jumlah stok yang diambil berlebihan!")
+        if (jumlahStok > this.stok) {
+            SystemOutput.tampilkanPesanMiniError("Jumlah stok yang diambil melebihi stok yang ada!")
         } else {
             this.stok -= jumlahStok
         }

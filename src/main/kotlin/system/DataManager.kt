@@ -69,34 +69,26 @@ object DataManager {
         val transaksiList = ArrayList<Transaksi>()
         val jsonArray = JsonParser.parseString(jsonText).asJsonArray
 
-        for (element in jsonArray) { // Loop untuk setiap objek Transaksi dalam JSON array
+        for (element in jsonArray) {
             val objInJsonData = element.asJsonObject
             val daftarPesananJsonArray = objInJsonData["daftarPesanan"].asJsonArray
             val daftarPesanan = ArrayList<Pesanan>()
 
-            // Loop untuk setiap pesanan dalam satu transaksi
             for (pesananElement in daftarPesananJsonArray) {
                 val pesananObj = pesananElement.asJsonObject
-                val menuObj = pesananObj["menu"].asJsonObject
-                val tipe = menuObj["tipe"].asString
 
-                val menu = when (tipe) {
-                    "makanan" -> gson.fromJson(menuObj, Makanan::class.java)
-                    "minuman" -> gson.fromJson(menuObj, Minuman::class.java)
-                    else -> null
-                }
+                val menuId = pesananObj["menuId"].asInt
+                val namaMenu = pesananObj["namaMenu"].asString
+                val hargaSatuan = pesananObj["hargaSatuan"].asDouble
+                val jumlah = pesananObj["jumlah"].asInt
 
-                if (menu != null) {
-                    val jumlah = pesananObj["jumlah"].asInt
-                    val subtotal = pesananObj["subtotal"].asDouble
-                    daftarPesanan.add(
-                        Pesanan(
-                            menu = menu,
-                            jumlah = jumlah,
-                            subtotal = subtotal
-                        )
-                    )
-                }
+                val pesanan = Pesanan(
+                    menuId = menuId,
+                    namaMenu = namaMenu,
+                    hargaSatuan = hargaSatuan,
+                    jumlah = jumlah
+                )
+                daftarPesanan.add(pesanan)
             }
 
             val transaksi = Transaksi(
