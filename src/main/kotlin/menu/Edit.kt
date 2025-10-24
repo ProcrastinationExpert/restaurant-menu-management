@@ -5,7 +5,6 @@ import model.Menu
 import model.Minuman
 import system.MenuManager
 import system.SystemOutput
-import system.UserInteract
 
 fun editMenuDalamList() {
     println("==============================")
@@ -37,30 +36,7 @@ fun editMenuDalamList() {
         return
     }
 
-    var isTambahStok = false
-    val menuPilihanStok = """
-        ==============================
-        Apakah Anda ingin menambah stok atau mengedit stok?
-        1. Tambah stok
-        2. Edit stok
-        ==============================
-    """.trimIndent()
-    println("\n$menuPilihanStok")
-
-    val pilihanStok = UserInteract.pilihOpsiAngka("Pilih opsi angka: ")
-
-    when (pilihanStok) {
-        1 -> {
-            isTambahStok = true
-            print("Masukkan berapa jumlah stok yang ingin ditambahkan (kosongkan jika tidak perlu)\t: ")
-        }
-        2 -> {
-            print("Masukkan stok menu baru (kosongkan jika tidak perlu)\t: ")
-        }
-        else -> {
-            SystemOutput.tampilkanPesanError("Tidak ada opsi pilihan pada list berdasarkan input yang Anda masukkan")
-        }
-    }
+    print("Masukkan stok menu baru (kosongkan jika tidak perlu)\t: ")
     val inputStok: String? = readlnOrNull()
 
     val stokBaru = if (inputStok.isNullOrBlank()) menuSebelumDiedit.ambilStok()
@@ -85,7 +61,7 @@ fun editMenuDalamList() {
                 tipe = menuSebelumDiedit.ambilTipe(),
                 nama = namaBaru,
                 harga = hargaBaru,
-                stok = if (isTambahStok) menuSebelumDiedit.ambilStok() + stokBaru else stokBaru,
+                stok = stokBaru,
                 isPedas = pedasBaru
             )
         }
@@ -101,7 +77,7 @@ fun editMenuDalamList() {
                 tipe = menuSebelumDiedit.ambilTipe(),
                 nama = namaBaru,
                 harga = hargaBaru,
-                stok = if (isTambahStok) menuSebelumDiedit.ambilStok() + stokBaru else stokBaru,
+                stok = stokBaru,
                 isDingin = dinginBaru
             )
         }
