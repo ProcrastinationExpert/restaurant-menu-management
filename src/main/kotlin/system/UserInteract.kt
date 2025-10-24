@@ -29,6 +29,4 @@ object UserInteract {
             else -> null
         }
     }
-
-
 }
