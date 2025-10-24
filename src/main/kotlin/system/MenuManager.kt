@@ -29,7 +29,6 @@ object MenuManager {
     }
 
     fun showMenuList() {
-        updateMenuList()
         if (menuList.isEmpty()) {
             SystemOutput.tampilkanPesanMiniError("Tidak ada menu yang terdaftar!")
         }
@@ -64,7 +63,7 @@ object MenuManager {
         SystemOutput.tampilkanPesanSukses("Menu berhasil diedit")
     }
 
-    fun removeMenu(id: Int) {
+    fun removeMenu(id: Int?) {
         val menuToRemove = findMenuById(id)
         if (menuToRemove == null) {
             SystemOutput.tampilkanPesanMiniError("Menu dengan id tersebut tidak dapat ditemukan!")

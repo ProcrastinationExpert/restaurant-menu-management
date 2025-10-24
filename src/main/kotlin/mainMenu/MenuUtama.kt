@@ -1,11 +1,9 @@
 package mainMenu
 
 import system.SystemOutput
-import java.util.Scanner
+import system.UserInteract
 
 fun mainMenu() {
-    val scanner = Scanner(System.`in`)
-
     val menuInfo = """
         ==============================
         Program Manajemen Menu Restoran
@@ -18,8 +16,7 @@ fun mainMenu() {
 
     do {
         println("\n$menuInfo")
-        print("Pilih opsi: ")
-        val option = scanner.nextInt()
+        val option = UserInteract.pilihOpsiAngka("Pilih opsi: ")
         when (option) {
             1 -> {
                 kelolaMenu()

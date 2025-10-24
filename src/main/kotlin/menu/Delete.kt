@@ -1,12 +1,10 @@
 package menu
 
 import system.MenuManager
-import java.util.Scanner
+import system.UserInteract
 
 fun hapusMenuDalamList() {
-    val scanner = Scanner(System.`in`)
     tampilkanSeluruhMenu()
-    print("Masukkan id menu yang ingin dihapus (nomor yang terdapat dalam []): ")
-    val idHapus = scanner.nextInt()
+    val idHapus = UserInteract.pilihOpsiAngka("Masukkan id menu yang ingin dihapus (nomor yang terdapat dalam []): ")
     MenuManager.removeMenu(idHapus)
 }

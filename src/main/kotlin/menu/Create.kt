@@ -21,6 +21,7 @@ fun tambahMenuBaru() {
     val namaMenu = readln()
     print("Harga per porsi: ")
     val hargaPerPorsi = scanner.nextDouble()
+    scanner.nextLine()
     print("Stok awal: ")
     val stok = scanner.nextInt()
     scanner.nextLine()
@@ -43,7 +44,8 @@ fun tambahMenuBaru() {
                         | Pedas : $isPedas
                         _________________________________________
                         """.trimIndent()
-            menuUntukDitambah = Makanan(id = MenuManager.getNextMenuId(),
+            menuUntukDitambah = Makanan(
+                id = MenuManager.getNextMenuId(),
                 tipe = tipeMenu,
                 nama = namaMenu,
                 harga = hargaPerPorsi,
@@ -66,7 +68,8 @@ fun tambahMenuBaru() {
                         | Dingin: $isDingin
                         _________________________________________
                         """.trimIndent()
-            menuUntukDitambah = Minuman(id = MenuManager.getNextMenuId(),
+            menuUntukDitambah = Minuman(
+                id = MenuManager.getNextMenuId(),
                 tipe = tipeMenu,
                 nama = namaMenu,
                 harga = hargaPerPorsi,
